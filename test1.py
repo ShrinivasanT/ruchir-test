@@ -1,16 +1,10 @@
 import pandas
-import torch
-import torch.nn as nn
-import torch.optim as optim
-from torchvision import datasets, transforms, models
-import cv2
 import math
 import os
 import random
 import re
 import sys
 
-device = torch.device("cuda")
 def formingMagicSquare(s):
     magic_squares = [
         [[8, 1, 6], [3, 5, 7], [4, 9, 2]],
