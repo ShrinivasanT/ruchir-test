@@ -1,16 +1,10 @@
 import pandas
-import torch
-import torch.nn as nn
-import torch.optim as optim
-from torchvision import datasets, transforms, models
-import cv2
 import math
 import os
 import random
 import re
 import sys
 
-device = torch.device("cuda")
 def formingMagicSquare(s):
     magic_squares = [
         [[8, 1, 6], [3, 5, 7], [4, 9, 2]],
@@ -38,7 +32,8 @@ def formingMagicSquare(s):
     return min_cost
 
 if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+    output_path = os.environ.get('OUTPUT_PATH', 'output.txt')  # Default to 'output.txt' if not set
+    fptr = open(output_path, 'w')
 
     s = []
 
